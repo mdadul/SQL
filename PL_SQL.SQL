@@ -1,4 +1,4 @@
-========Procedure with return =======
+-- ========Procedure with return =======
 DECLARE
     VAL NUMBER;
     PROCEDURE SUMMATION(AA IN NUMBER, BB IN NUMBER, ANS OUT NUMBER) IS
@@ -11,9 +11,9 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE(VAL);
 
 END;
-======================================
+-- ======================================
 
-*************Procedure***************
+-- *************Procedure***************
 DECLARE
     PROCEDURE SUMMATION(AA IN NUMBER, BB IN NUMBER) IS
     BEGIN
@@ -27,9 +27,9 @@ DECLARE
 BEGIN
     SUMMATION(10,20);
 END;
-***************************************
+-- ***************************************
 
-\\\\\\\\\\\\\\\\\\\\CURSOR (GENERAL METHODE + LOOP METHODE)
+-- \\\\\\\\\\\\\\\\\\\\CURSOR (GENERAL METHODE + LOOP METHODE)
 DECLARE
     CURSOR EMP IS
     SELECT FIRST_NAME,LAST_NAME
@@ -57,8 +57,8 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE(DET.SALARY);
     END LOOP;
 END;
-/////////////////////////////////////////////////
-[[[[[[[[[[[[[[[[FOR CURSOR]]]]]]]]]]]]]]]]]]]]]]]
+-- /////////////////////////////////////////////////
+-- [[[[[[[[[[[[[[[[FOR CURSOR]]]]]]]]]]]]]]]]]]]]]]]
 BEGIN
   FOR details IN (
         SELECT 
@@ -72,9 +72,9 @@ BEGIN
         details.last_name );
   END LOOP;
 END;
-[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+-- [[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-||||||||||||||||CASE|||||||||||||||||||||||||||||
+-- ||||||||||||||||CASE|||||||||||||||||||||||||||||
 DECLARE
   c_grade CHAR( 1 );
   c_rank  VARCHAR2( 20 );
@@ -96,10 +96,10 @@ BEGIN
   END CASE;
   DBMS_OUTPUT.PUT_LINE( c_rank );
 END;
-|||||||||||||||||||||||||||||||||||||||||||||||||||
+-- |||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-<<<<<<<<<<<<<<<<<IF ELSE IF>>>>>>>>>>>>>>>>>>>>>>>>
+-- <<<<<<<<<<<<<<<<<IF ELSE IF>>>>>>>>>>>>>>>>>>>>>>>>
 DECLARE
   n_sales NUMBER := 300000;
   n_commission NUMBER( 10, 2 ) := 0;
@@ -116,9 +116,9 @@ BEGIN
 
   DBMS_OUTPUT.PUT_LINE(n_commission);
 END;
-<<<<<<<<<<<<<<<<><<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>
+-- <<<<<<<<<<<<<<<<><<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>
 
-=================WHILE LOOP=====================
+-- =================WHILE LOOP=====================
 DECLARE 
     i number := 1; 
     j number := 1; 
@@ -128,9 +128,9 @@ BEGIN
         i:= i+1; 
       END LOOP; 
 END;
-=================================================
+-- =================================================
 
-``````````````````FOR LOOP````````````````````
+-- ``````````````````FOR LOOP````````````````````
 DECLARE 
     i number := 1; 
     j number := 1; 
@@ -143,8 +143,8 @@ BEGIN
       END LOOP inner_loop; 
       END LOOP outer_loop; 
 END;
-`````````````````````````````````````````````````````
-:::::::::::::::GENERAL LOOP::::::::::::::::::::::
+-- `````````````````````````````````````````````````````
+-- :::::::::::::::GENERAL LOOP::::::::::::::::::::::
 DECLARE 
     i number := 1; 
 BEGIN
@@ -156,9 +156,9 @@ BEGIN
       END IF; 
    END LOOP; 
 END;
-:::::::::::::::::::::::::::::::::::::::::::::::::
+-- :::::::::::::::::::::::::::::::::::::::::::::::::
 
-?????????????????PRIME NUMBER?????????????????
+-- ?????????????????PRIME NUMBER?????????????????
 DECLARE
 	INPUT NUMBER:=:INP;
     FLAG NUMBER := 0;
@@ -183,4 +183,4 @@ BEGIN
         dbms_output.put_line(INPUT || ' IS NOT A PRIME NUMBER ');
     END IF;
 END;
-?????????????????????????????????????????????????
+-- ?????????????????????????????????????????????????
