@@ -171,7 +171,7 @@ BEGIN
     END IF;
  
    FOR I IN 2..INPUT/2 LOOP
-    	IF I MOD 2 = 0 THEN
+    	IF INPUT MOD I = 0 THEN
         	FLAG := 1;
             EXIT;
         END IF;
