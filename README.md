@@ -22,3 +22,19 @@ FROM table_name
 /* if we want to select all columns from table then, */
 SELECT * FROM table_name
 ```
+
+## The DISTINCT Keyword
+The SQL **DISTINCT** keyword is used in conjunction with SELECT to eliminate all duplicate records and return only unique ones.
+```sql
+SELECT DISTINCT column_name1, column_name2
+FROM table_name;
+```
+## The WHERE Statement
+The **WHERE** clause is used to extract only those records that fulfill a specified criterion.
+** The syntax for the WHERE clause:**
+```sql
+SELECT column_list 
+FROM table_name
+WHERE condition;
+```
+
